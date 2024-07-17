@@ -9,10 +9,13 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-	@Environment(\.self) var environment
-	@State private var hexValue = ""
-	@State private var pickerColor = Color.white
+	@State private var hexValue = ""				// displayed hex text of color
+	@State private var pickerColor = Color.white	// displayed color
+	
+	// 'color' is intended to be the actual source of truth.
+	// In a real project this would likely passed in via a binding.
 	@State private var color = Color.white
+	
     var body: some View {
         VStack {
 			ColorPicker("Color", selection: $pickerColor)

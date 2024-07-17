@@ -155,11 +155,9 @@ func getHexColorComponents(_ str: String, red: inout Double, green: inout Double
 	red = Double(intToColorComponent(array[0]))
 	green = Double(intToColorComponent(array[1]))
 	blue = Double(intToColorComponent(array[2]))
-//	red = Double(Double(array[0]) / 255.0)
-//	green = Double(Double(array[1]) / 255.0)
-//	blue = Double(Double(array[2]) / 255.0)
 }
 
+// Below -- the hard way. Left in for illustrative purposes.
 func getHexColorComponentsOld(_ str: String, red: inout Double, green: inout Double, blue: inout Double) {
 	red = 0
 	green = 0
